@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Git Flow Cheatsheet</title>
+    <meta name="Integrating Git Workflow With Github" content="cheatsheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> 
+    <link rel="stylesheet" type="text/css" href="./utilities.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <header class="hero">
+      <div id="navbar" class="navbar"> <!--#navbar is reserved for DOM manipulation using javascript-->
+        <nav class="nav-links">
+          <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#initialize">initialize</a></li>
+            <li><a href="#modify">modify</a></li>
+            <li><a href="#pull-request">pull request</a></li>
+            <li><a href="#merge">merge</a></li>
+            <li><a href="#advanced-git">advanced git</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hero-content">
+        <h1>Git Version Control</h1>
+        <h2>Git Workflow Using Github</h2>
+      </div>
+    </header>
+
+    <hr class="section-divider"> <!--orange sectional divider-->
+    
+    <!-- About -->
+    <section id="about" class="icons bg-light">
+      <div class="flex-items">
+        <div>
+          <i class="fab fa-git fa-3x"></i>
+          <div>
+            <p>Git is version control software that helps development teams manage changes to source code over time, keeping track of every modification to the code in a database such as Github. Rather than have only one single place for the full version history of the software, in Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.</p>
+          </div>
+        </div> 
+        <div>
+          <i class="fab fa-github fa-3x"></i>
+          <div>
+            <p>Github.com provides hosting for version control using Git. This site offers the distributed version control and source code management functionality of Git. GitHub is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build software alongside millions of developers. </p>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider"> <!--orange sectional divider-->
+
+    <!-- Step by step *Github flow* cards -->
+    <main class="git-steps">
+      
+      <section class="workflow-intro flex-item">
+        <h2>Git and Github Workflow: Basic to Advanced Steps</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nobis harum minima quia eum a doloremque tempora? Sapiente dolorum perferendis soluta, accusamus ullam sint aut similique porro mollitia tempora laudantium aliquid molestias! Corrupti nemo blanditiis doloribus, vitae, commodi possimus similique beatae harum porro quidem at voluptatum magni. Accusantium, soluta illum.</p>
+      </section>
+      
+      <section class="flex-container" id="initialize"> 
+        <!-- initialize git -->
+        <h2 class="rotate-text">initialize</h2>
+        <article class="instruction-card">
+          <code>$ git init</code>
+          <p>Initializes git within your local app files.</p>
+        </article>
+        <article class="instruction-card">
+          <code>$ git status</code>
+          <p>Displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by git.</p>
+        </article>
+      </section> 
+     
+    </main>
+    
+        
+<!--<article class="step-card">
+      <code>git status</code>
+      <p>Displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by git.</p>
+    </article> -->
+    
+
+      <!-- <section id="modify" class="timeline modify">
+        <div class="container right">
+          <div class="content">
+            <code>git add .</code>
+            <p>Adds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. Changes are not actually recorded until you run git commit.</p>
+          </div>
+          <div class="step-five">
+            <code>git commit -am "init commit"</code>
+            <p>An individual change to a file (or set of files) that allows you to keep record of what changes were made when and by whom by including a message (-am "").</p>
+          </div>
+          <div class="step-six">
+            <code>git status/git log</code>
+            <p>Repeat the "git add ." command after adding another change in the working directory to the staging area. Git log shows history of all commits.</p>
+          </div>
+        </div>
+      </section>
+          <section>
+            <div class="steps-7-8-9">
+              <div class="step-seven">
+                <code>git push</code>
+                <p>Used to upload local repository content to a remote repository. Pushing is how you transfer commits from your local repository to a remote repo. <strong>Caution!</strong> pushing has the potential to overwrite changes.</p>
+              </div>
+              <div class="step-eight">
+                <code>git add remote + remote Github repo's url</code>
+                <p>The git remote add command will create a new connection record to a remote repository. After adding a remote, you'll be able to use <name> as a convenient shortcut for <url> in other Git commands.</p>
+              </div>
+              <div class="step-nine">
+                <code>git push -u origin master</code>
+                <p>Tells git to push all of the commits in the currently checked out local branch (i.e. from your file system) to the remote repo identified by the name origin on its remote branch named master.</p>
+              </div>
+            </div>
+          </section><hr>
+          <h3>Once file is modified, check the difference between initialization and any modifications. Make sure to create a branch before pushing to master.</h3><hr>
+          <section>
+            <div class="steps-10-11-12">
+              <div class="step-ten">
+                <h2>git diff</h2>
+                <p>A multi-use git command that when executed runs a diff function on git data sources. These data sources can be commits, branches, files and more. The git diff command is often used along with git status and git log to analyze the current state of a git repo.</p>
+              </div>
+              <div class="step-eleven">
+                <h2>git checkout -b foobar</h2>
+                <p>Creates a new branch of the master in the remote file.</p>
+              </div>
+              <div class="step-twelve">
+                <h2>git add .</h2>
+                <p>Adds a change in the working directory to the staging area.</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="steps-13-14-15">
+              <div class="step-thirteen">
+                <h2>git commit -m "updated foobar"</h2>
+                <p>An individual change to a file (or set of files) that allows you to keep record of what changes were made when and by whom by including a message (-am "").</p>
+              </div>
+              <div class="step-fourteen">
+                <h2>git add .</h2>
+                <p>Adds a change in the working directory to the staging area.</p>
+              </div>
+              <div class="step-fifteen">
+                <h2>git push</h2>
+                <p>Used to upload local repository content to a remote repository.</p>
+              </div>
+            </div>
+          </section><hr>
+          <h3>If you need to work with a team of developers on a remote repo or allow the github community to add to your repo's source, the "Pull requests" feature will allow corraboration for both instances.</h3><hr>
+          <section>
+
+          </section>
+          <div class="branch-pull-merge"></div>
+        </div>
+      </div>  
+      
+    
+      
+      
+      
+      
+          
+          <li>git diff</li> <!-- shows the initial/last code and modified code before adding -->
+          <!-- <li>git checkout -b foobar</li> give your branch an id; switched from master to brch -->
+          <!-- <li>git add .</li> --><!-- add modified foobar file -->
+          <!-- <li>git commit -m "updated foobar"</li> commit modified foobar file -->
+          <!-- <li>git add .</li> <!-- add modified foobar file
+          <!-- <li>git push</li> git will not push until there's a branch created in remote. cp git push line on your terminal and push to remote. -->
+          <!-- <li>Pull requests</li> goto remote and click 'Pull requests' -->
+          <!-- <li>New pull requests</li> click 'New pull requests -->
+          <li>Create pull request</li> click your file's link, click 'Create pull requests' -->
+          <li>Create pull request</li> Insert foobar file into header input and click 'Create pull request' In Trello, move file from 'Ongoing' to 'Code review'; this is the review point before merge. Go back to 'Backlog' and move the next file/story to 'Ongoing' -->
+          <li>git checkout master or gco for short</li> <!--  -->
+          <li>git log</li> <!-- check to make sure sure your brnch is update -->
+          <li>gco -</li> <!-- switched to branch foobar -->
+          <li>git log</li>
+          <li>gco master</li> <!-- switch to branch master -->
+          <li>git checkout -b foobar2</li> <!-- create another new branch for new 'Ongoing' file -->
+          <li>git diff</li> <!-- to check change in foobar2 -->
+          <li>git add foobar2</li> <!-- or you can click on the + sign in the left file column -->
+          <li>git commit -m " "</li> <!-- an input will appear to add message to commit, then click check sign -->
+          <li>git log</li> <!-- to confirm add and commit of foobar2 -->
+          <li>git push --set-upstream origin foobar2</li> <!-- system will relay another message to add a git push to upstream -->
+          <li>Pull requests</li> <!-- goto remote and click 'Pull requests' -->
+          <li>New pull requests</li> <!-- click 'New pull requaets -->
+          <li>Create pull request</li> <!-- click your file's link, click 'Create pull requests' -->
+          <li>Create pull request</li> <!-- Insert foobar2 file into header input and click 'Create pull request' In Trello, move foobar2 from 'Ongoing' to 'Code review'; this is the review point before merge. Go back to 'Backlog' and move the next file/story to 'Ongoing'-->
+          <li>Pull requests</li> <!-- goto remote and click 'Pull requests' to check on original 'Foobar' file -->
+          <li>Viewed</li> <!-- click on 'Viewed' checkbox -->
+          <li>Conversation</li> <!-- click 'Conversation' tab -->
+          <li>Merge pull request</li> <!-- after review -->
+          <li>Confirm merge</li> <!-- merged original branch 'foobar' into master brnch -->
+          <li>gco master</li> <!-- changes will not appear because we're in the local repo -->
+          <li>git pull</li> <!-- acquire all the changes from github into local and move foobar to 'Done' tab in Trello -->
+        </ul>
+      </section> -->
+    </div> <!--end of container-->
+    <script src="" async defer></script>
+  </body>
+</html>
