@@ -53,7 +53,7 @@
 
     <hr class="section-divider"> <!--orange sectional divider-->
 
-    <!-- Step by step *Github flow* cards -->
+    <!-- Step by step *git steps/Github flow* flip cards -->
     <main class="git-steps">
       
       <section class="intro-flex-item">
@@ -61,13 +61,31 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nobis harum minima quia eum a doloremque tempora? Sapiente dolorum perferendis soluta, accusamus ullam sint aut similique porro mollitia tempora laudantium aliquid molestias! Corrupti nemo blanditiis doloribus, vitae, commodi possimus similique beatae harum porro quidem at voluptatum magni. Accusantium, soluta illum.</p>
       </section>
       
-      <section class="flex-container" id="initialize"> 
-        <!-- initialize git -->
-        <h2 class="rotate-text">initialize</h2>
-        <article class="instruction-card">
-          <code>$ git init</code>
-          <p>Initializes git within your local app files.</p>
-        </article>
+      <section class="grid-container" id="initialize">  <!-- initialize git -->
+        <div>
+          <h2 class="rotate-text">initialize</h2>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-face card-face-front">
+              <h2><code>init step</code></h2>
+            </div>
+            <div class="card-face card-face-back">
+              <div class="card-content">
+                <div class="card-header">
+                  <img src="xx.jpg" alt="" class="pp">
+                  <h2>lorem ipsum</h2>
+                </div>
+                <div class="card-body">
+                  <h3>lorem ipsum</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa delectus error molestiae odit. Placeat sint esse doloribus neque beatae. Ea expedita, ut in incidunt aliquam sunt soluta assumenda ullam impedit!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            
+
         <article class="instruction-card">
           <code>$ git status</code>
           <p>Displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by git.</p>
@@ -154,11 +172,7 @@
           </section>
           <div class="branch-pull-merge"></div>
         </div>
-      </div>  
-      
-    
-      
-      
+      </div>
       
       
           
@@ -197,6 +211,7 @@
         </ul>
       </section> -->
     </div> <!--end of container-->
-    <script src="" async defer></script>
+    
+    <script src="main.js" async defer></script>
   </body>
 </html>
