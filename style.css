@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-	margin: 0;
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 body {
-  background: #e9e1e1;
-  color:#333;
+  background: #fff;
+  color: #333;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5rem;
 }
@@ -26,11 +28,11 @@ a {
 
 h2 {
   font-weight: 600;
-  color:#333;
+  color: #333;
   font-size: 2.5rem;
   text-align: center;
   margin: 30px 0 30px;
-} 
+}
 
 h3 {
   font-weight: 300;
@@ -58,7 +60,6 @@ img {
   height: 80px;
   background-color: #faebd7;
   position: fixed;
-  font-weight: 400;
   top: 0;
 }
 
@@ -67,14 +68,15 @@ img {
 }
 
 .navbar a {
-  color: #e4440a;
+  color: #f54f13;
+  font-size: 1rem;
   font-weight: 550;
   padding: 10px 20px;
   margin: 0 10px;
 }
 
 .navbar a:hover {
-  border-bottom:  #a03007 2px solid;
+  border-bottom: #f54f13 2px solid;
 }
 
 /* header */
@@ -83,12 +85,12 @@ img {
   background: url('./img/colorful-tree.jpg') no-repeat center center/cover;
   height: 25vh;
   position: relative;
-  color: #eedede
+  color: #eedede;
 }
 
 .hero * {
   z-index: 10;
-} 
+}
 
 .hero-content {
   display: flex;
@@ -103,7 +105,8 @@ img {
 }
 
 .hero-content h1 {
-  font-size: 6rem;
+  font-size: 10vw;
+  color: #fff;
   font-weight: 200;
   margin-bottom: 2rem;
   z-index: inherit;
@@ -129,7 +132,7 @@ img {
 }
 
 .section-divider {
-  border-top: .71rem solid coral;
+  border-top: 0.33rem solid coral;
   width: 100%;
   margin: 10px 0px;
   border-bottom: 0;
@@ -138,25 +141,25 @@ img {
 /* about content */
 
 .icons {
-  padding: 30px;
+  padding: 20px;
 }
 
 .icons h2 {
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .icons i {
   background-color: #086d20;
   color: #fff;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 50%;
   margin-bottom: 15px;
 }
 
 #about p {
   text-align: justify;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.8rem;
 }
 
@@ -170,7 +173,7 @@ img {
   height: 100%;
 }
 
-.flex-items > div { 
+.flex-items > div {
   /* > means direct div child */
   padding: 30px;
   width: 48%;
@@ -195,19 +198,18 @@ img {
   align-self: center;
   text-align: justify;
   height: 100%;
-  margin: 0 100px;;
+  width: 100%;
   line-height: 1.5rem;
 }
 
-.workflow-intro p {
-line-height: 1.2;
-width: 75%;
-text-align: justify;
-align-self: center;
-color: #444;
+.intro-flex-item p {
+  font-size: 1rem;
+  line-height: 1.8;
+  width: 100%;
+  text-align: justify;
+  align-self: center;
+  color: #444;
 }
-
-
 
 .rotate-text {
   display: inline-block;
@@ -217,8 +219,6 @@ color: #444;
   padding: 5px;
   margin: 40px;
 }
-
-
 
 code {
   display: inline-block;
@@ -230,9 +230,6 @@ code {
 
 /* mobile */
 
-
-
 /* Media queries - Responsive timeline on screens less than 600px wide */
 
 /* @media screen and (max-width: 600px) {} */
- 
